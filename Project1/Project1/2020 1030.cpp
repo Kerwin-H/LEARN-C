@@ -6,24 +6,26 @@
 //门帘问题     二分查找法
 //
 //
-#include<stdio.h>
-#include<stdlib.h>
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//#include<stdlib.h>
+//
 //int main(){
-//	int i=0;
-//	int count=0;
-//	for (i = 101; i <= 200; i++){
-//		int j = 0;
-//		for (j = 2; j < i; j++)
+//	printf("请输入一个数:\n");
+//	int i = 0;
+//	scanf("%d", &i);
+//	int j = 0;
+//	for (j = 2; j < i; j++){
 //		if (i%j == 0){
+//			printf("这个数不是素数\n");
 //			break;
 //		}
 //		if (i == j){
-//			count++;
-//			printf("%d\t",i);
-//		
+//			printf("这个数是素数");
+//			
 //		}
+//		continue;
 //	}
-//	printf("\tcount=%d\n",count);
 //	system("pause");
 //	return 0;
 //}
@@ -99,37 +101,37 @@
 //	}
 //
 //
-#include<stdio.h>
-#include<stdlib.h>
-int main(){
-	int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
-	int toFind = 9;
-	int left = 0;
-	int right = sizeof(arr) / sizeof(arr[0]) - 1;
-	while (left <= right){
-
-		int mid = (left + right) / 2;
-		if (toFind < arr[mid]){
-
-			right = mid - 1;
-		}
-		else if (toFind>arr[mid]){
-
-			left = mid + 1;
-		}
-		else{
-
-			printf("找到对应元素,下标为:%d\n", mid);
-			break;
-		}
-	}
-	if (left > right){
-
-		printf("该元素不存在!\n");
-		system("pause");
-		return 0;
-	}
-}
+//#include<stdio.h>
+//#include<stdlib.h>
+//int main(){
+//	int arr[] = { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+//	int toFind = 9;
+//	int left = 0;
+//	int right = sizeof(arr) / sizeof(arr[0]) - 1;
+//	while (left <= right){
+//
+//		int mid = (left + right) / 2;
+//		if (toFind < arr[mid]){
+//
+//			right = mid - 1;
+//		}
+//		else if (toFind>arr[mid]){
+//
+//			left = mid + 1;
+//		}
+//		else{
+//
+//			printf("找到对应元素,下标为:%d\n", mid);
+//			break;
+//		}
+//	}
+//	if (left > right){
+//
+//		printf("该元素不存在!\n");
+//		system("pause");
+//		return 0;
+//	}
+//}
 
 
 
