@@ -1,59 +1,59 @@
-//======================================1
-#define _CRT_SECURE_NO_WARNINGS      //输入两个数,判断他们的二进制数位有几个不一样
-#include <stdio.h>
-#include <stdlib.h>
-int countOneBit(int num) {
-	
-	int count = 0;
-	for (int i = 0; i < 32; i++) {
-		if (num & (1 << i)) {
-			count++;
-		}
-	}
-	return count;
-}
-int main(){
-	int m = 0;
-	int n = 0;
-	int num = 0;
-	printf("请输入两个数:\n");
-	scanf("%d %d",&m,&n);
-	num = m^n;
-	countOneBit(num);
-	printf("%d",countOneBit(num));
-	system("pause");
-	return 0;
-}
-
-
-
-//=========================================2
-#define _CRT_SECURE_NO_WARNINGS   //输入一个数,分奇偶打印出二进制数位
-#include <stdio.h>
-#include <stdlib.h>
-
-void Printbit(int num){
-	printf("偶数位:");
-	for (int i = 31; i >= 1; i -= 2)    //偶数依次递减
-	{
-		printf("%d ", (num >> i) & 1);
-	}
-	printf("\n");
-	printf("奇数位:");
-	for (int i = 30; i >= 0; i -= 2)     //奇数
-	{
-		printf("%d ", (num >> i) & 1);
-	}
-	printf("\n");
-}
-int main(){
-	int num = 0;
-	printf("please enter a number:\n");
-	scanf("%d", &num);
-	Printbit(num);
-	system("pause");
-	return 0;
-}
+////======================================1
+//#define _CRT_SECURE_NO_WARNINGS      //输入两个数,判断他们的二进制数位有几个不一样
+//#include <stdio.h>
+//#include <stdlib.h>
+//int countOneBit(int num) {
+//	
+//	int count = 0;
+//	for (int i = 0; i < 32; i++) {
+//		if (num & (1 << i)) {
+//			count++;
+//		}
+//	}
+//	return count;
+//}
+//int main(){
+//	int m = 0;
+//	int n = 0;
+//	int num = 0;
+//	printf("请输入两个数:\n");
+//	scanf("%d %d",&m,&n);
+//	num = m^n;
+//	countOneBit(num);
+//	printf("%d",countOneBit(num));
+//	system("pause");
+//	return 0;
+//}
+//
+//
+//
+////=========================================2
+//#define _CRT_SECURE_NO_WARNINGS   //输入一个数,分奇偶打印出二进制数位
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//void Printbit(int num){
+//	printf("偶数位:");
+//	for (int i = 31; i >= 1; i -= 2)    //偶数依次递减
+//	{
+//		printf("%d ", (num >> i) & 1);
+//	}
+//	printf("\n");
+//	printf("奇数位:");
+//	for (int i = 30; i >= 0; i -= 2)     //奇数
+//	{
+//		printf("%d ", (num >> i) & 1);
+//	}
+//	printf("\n");
+//}
+//int main(){
+//	int num = 0;
+//	printf("please enter a number:\n");
+//	scanf("%d", &num);
+//	Printbit(num);
+//	system("pause");
+//	return 0;
+//}
 
 
 //===============================================3
@@ -69,16 +69,15 @@ int stat(int num){
 			}
 		}
 		printf("一共有%d个\n",count);
-		for (int i = 30; i >= 0; i -= 1)    
+		for (int i = 31; i >= 0; i -= 1)    
 				{
-					printf("%d ", (num >> i) & 1);
+					printf("%d  ", (num >> i) & 1);
 				}
 		return count;
 	}
 int main(){
 	int count = 0;
 	int m = 0;
-	int n = 0;
 	printf("please enter number:\n");
 	scanf("%d",&m);
 	stat(m);
