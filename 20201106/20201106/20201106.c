@@ -1,12 +1,14 @@
 #define _CRT_SECURE_NO_WARNINGS
 //=======================1一个例题
 #include <stdio.h>
+#include<stdlib.h>
 int main()
 {
 	int a = 0x11223344;			//定义一个数组里面存储{11,22,33,44}
 	char *pc = (char*)&a;		//将整个储存空间的大小赋给pc变量
 	*pc = 0;					//将pc变量的大小也就是最后一个值变为0
-	printf("%x\n", a);			//将这个数组整个打印出来
+	printf("%x \n", a);
+	system("pause");//将这个数组整个打印出来
 	return 0;
 }
 
