@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-
+//====Æ½¾ù¼ÆËã
 void average(float *p, int n){
 	float *p_end;
 	float sum = 0, aver;
