@@ -60,18 +60,20 @@ int main(){
 //==============================================
 	//创建一个枚举类型的变量
 	enum Sex s = MALE;  //或者进行别名的的定义
-
-	printf("%d\n",MALE);
+	printf("%d\n",s);
 	printf("%d\n",FEMALE);
 	printf("%d\n",UNKNOWN);
 
 
 	//联合体使用场景少,牵制太多
-	union Test t;
+	//union Test t;
 	t.c = 0x11223344;
 	printf("%x\n",t.c);
-	t.a = 0x55;
+	t.a = 0x66;
 	printf("%x\n",t.c);
+	
+	
+	
 	//printf("%d\n",sizeof(t));
 
 
